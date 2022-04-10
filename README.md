@@ -1,2 +1,2 @@
 # corail-troie
-Le projet Corail ecrit en Turbo Pascall for Windows, fonctionnant sous Windows 3.1
+Le projet Corail ecrit en Turbo Pascal for Windows, fonctionnant sous Windows 3.1
