@@ -912,8 +912,8 @@ End;
 Procedure SetCommand;
 Var
  Pause:Boolean;
- I,P:Integer;
  FirstParam:String;
+ PEnv:PChar;
 Begin
  Pause:=False;
  FirstParam:=ExtractParam(1);
@@ -931,19 +931,11 @@ Begin
  End
   Else
  If(FirstParam='/P')or(FirstParam='/p')Then Pause:=True;
- P:=0;
- {For I:=0to EnvCount do Begin
-  WriteLn(EnvStr(I));
-  If(Pause)Then Begin
-   Inc(P);
-   If P=ScreenSize.Y Then Begin
-    Write('Presse une touche pour continuer...');
-    ReadKey;
-    WriteLn;
-    P:=0;
-   End;
-  End;
- End;}
+ PEnv:=GetDOSEnvironment;
+ While PEnv[0]<>#0 do Begin
+  Inc(PEnv,StrLen(PEnv)+1);
+  WriteLn(StrPas(StrUpper(PEnv)));
+ End;
 End;
 
 Procedure ShiftCommand;Begin
