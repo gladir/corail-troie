@@ -371,15 +371,7 @@ Begin
   WriteLn('Code de page invalide.');
  End
   Else
- Begin
-  Regs.AX:=$6601;
-  Intr($21,Regs);
-  If(Regs.Flags and FCarry=FCarry)Then Begin
-   WriteLn('Page de code active inconnnu');
-  End
-   Else
-  WriteLn('Page de code active : ',Regs.BX);
- End;
+ WriteLn('Page de code active : ',GetKBCodePage);
 End;
 
 Procedure CLSCommand;
