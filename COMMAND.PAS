@@ -1,7 +1,7 @@
 { @author: Sylvain Maltais (support@gladir.com)
   @created: 2021
   @website(https://www.gladir.com/corail-troie)
-  @abstract(Target: Turbo Pascal, Free Pascal)
+  @abstract(Target: Turbo Pascal for Windows)
 }
 
 Program COMMAND;
